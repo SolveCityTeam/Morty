@@ -1,2 +1,2 @@
 # Morty
-A.I. assisted resource search engine for research institutions
+A.I. assisted resource search engine for research entities
