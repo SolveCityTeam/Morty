@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+"""
+Created on Fri Apr 28 11:30:56 2017
+@author: Dr. Briefs
+
+@Notes: uses PubMedLookup Python module obtained from here:
+https://github.com/mfcovington/pubmed-lookup
+"""
+
 
 from pubmed_lookup import PubMedLookup
 from pubmed_lookup import Publication
