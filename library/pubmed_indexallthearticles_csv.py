@@ -49,18 +49,18 @@ def search(PubMedID):
 #print(search('','ewchehab@rice.edu'))
 #print(search(22331878))
 
-for id_no in range(10019070, 28470030):
+for id_no in range(10021315, 28470030):
 	#print(tuple(id_no))
 #	df = pd.DataFrame(search(id_no), columns=['PubMedID','title','authors','journal','year','month','day','url','pubmed_url','citation','mini_citation','abstract','pagerank'])
 	df = pd.DataFrame(search(id_no), columns=['PubMedID','title','authors','journal','year','month','day','pubmed_url','citation','mini_citation','abstract','pagerank'])
 
-	# if file does not exist write header 
-	if not os.path.isfile('pubmed_index.csv'):
+	# Save scraped index entry to csv
+	if not os.path.isfile('pubmed_index.csv'):	# if file does not exist write header 
 		print('Parsing id_no #',id_no,'...'),
 		df.to_csv('pubmed_index.csv',header ='column_names')
-	elif any(pd.read_csv('pubmed_index.csv')['PubMedID']==id_no):
+	elif any(pd.read_csv('pubmed_index.csv')['PubMedID']==id_no):	# if entry already exists, ignore
 		print('repeat no:',id_no)
-	else: # else it doesn't exists, so append without writing the header
+	else:	# else it doesn't exists, so append without writing the header
 		print('Parsing id_no #',id_no,'...'),
 		df.to_csv('pubmed_index.csv',mode = 'a',header=False)
 
