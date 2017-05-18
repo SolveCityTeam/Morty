@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+"""
+Created on Thur May 17 15:34:00 2017
+@author: Dr. Briefs
+
+@Notes: Must first install docker and tempest_db in order to run Python client
+	See https://github.com/teapot-co/tempest#using-tempest-db-alpha
+"""
+
 # Test of Tempest server from python
 # This file is run by TempestDBServerClientSpec.
 # For line-by-line debugging, launch TempestDBTestServer,
